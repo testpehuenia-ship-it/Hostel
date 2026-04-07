@@ -96,6 +96,20 @@ body.light-theme {
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 1rem 5%;
+    }
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
 .btn-book {
     background: var(--accent);
     color: white;
@@ -123,6 +137,15 @@ body.light-theme {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 7rem 5% 3rem;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+
 .hero-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -138,6 +161,12 @@ body.light-theme {
     font-size: 4.5rem;
     line-height: 1.1;
     margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
 }
 
 .tldr-box {
@@ -166,6 +195,13 @@ body.light-theme {
     /* Antigravity isometric initial shape */
     transform: rotateX(15deg) rotateY(-15deg);
     transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+    .hero-visual .glass-card {
+        height: 350px;
+        transform: rotateX(5deg) rotateY(-5deg);
+    }
 }
 
 /* 4 Seasons Carousel */
@@ -453,6 +489,12 @@ body.light-theme {
     perspective: 1000px;
 }
 
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .gallery-item {
     border-radius: 24px;
     overflow: hidden;
@@ -549,6 +591,13 @@ body.light-theme {
     margin: 0 auto;
     overflow: hidden;
     gap: 8px; /* Slightly different from the original to add crisp separation */
+}
+
+@media (max-width: 768px) {
+    .interactive-selector {
+        flex-direction: column;
+        height: 600px;
+    }
 }
 
 .interactive-option {
@@ -989,6 +1038,12 @@ body.light-theme {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .custom-form .form-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 .btn-submit {
