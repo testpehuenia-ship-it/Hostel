@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hostel Andino es un hermoso refugio de montaña en Villa Pehuenia, Neuquén, ideal para esquiadores y aventureros. Disfruta de la mejor vista de la Patagonia.">
+    <title>Hostel Andino: Tu Refugio en Villa Pehuenia</title> <!-- SEO: Corrección Etiqueta H1/Title -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="light-theme">
+    
+    <div id="loader">
+        <!-- GSAP removes this later -->
+    </div>
+
+    <div class="bg-gradient"></div>
+
+    <header class="navbar">
+        <div class="logo nav-elem">ANDINO</div>
+        <nav>
+            <ul class="nav-links">
+                <li class="nav-elem"><a href="#inicio">Inicio</a></li>
+                <li class="nav-elem"><a href="#hostel">Hostel</a></li>
+                <li class="nav-elem"><a href="#galeria">Imágenes</a></li>
+                <li class="nav-elem"><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <button class="btn-book nav-elem" onclick="document.getElementById('reservas').scrollIntoView({behavior: 'smooth'})">Reservar</button>
+    </header>
+
+    <main class="perspective-container">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="hero-badge reveal-elem">Bienvenidos a Villa Pehuenia</span>
+                <h1 class="hero-title text-3d reveal-elem">Hostel Andino:<br>Tu Refugio.</h1>
+                
+                <!-- SEO/AEO TL;DR Box -->
+                <div class="tldr-box popup-elem">
+                    <h3>¿Qué es Hostel Andino?</h3>
+                    <p>Hostel Andino es un cálido alojamiento de montaña ubicado en Villa Pehuenia, Neuquén, diseñado para conectar a los viajeros con la naturaleza de los Andes. Frente al Lago Aluminé, ofrece un ambiente ideal para esquiar y descansar con habitaciones privadas y vistas inolvidables.</p>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Isometric 4 Seasons Carousel -->
+                <div class="glass-card main-glass carousel-container">
+                    <div class="carousel-slide active" style="background-image: url('summer.png');" data-season="summer">
+                        <div class="season-badge">Verano</div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: url('autumn.png');" data-season="autumn">
+                        <div class="season-badge">Otoño</div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: url('winter.png');" data-season="winter">
+                        <div class="season-badge">Invierno</div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: url('spring.png');" data-season="spring">
+                        <div class="season-badge">Primavera</div>
+                    </div>
+                    
+                    <!-- Dynamic Particle Layer -->
+                    <div id="fx-layer"></div>
+                    
+                    <!-- Controls -->
+                    <div class="carousel-controls">
+                        <button id="prevBtn">&lt;</button>
+                        <button id="nextBtn">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Imágenes (SEO Alt Tags) -->
+        <section id="galeria" class="section">
+            <div class="section-head reveal-elem">
+                <h2 class="text-3d">Nuestros Espacios</h2>
+            </div>
+            <div class="gallery-grid">
+                <!-- Original Image or Generated Gallery -->
+                <div class="gallery-item popup-elem">
+                    <img src="./hero.png" alt="Exterior del moderno Hostel Andino rodeado de árboles nevados en la Patagonia">
+                </div>
+                <div class="gallery-item popup-elem">
+                    <img src="./gallery.png" alt="Habitación compartida premium de madera iluminada en el Hostel Andino">
+                </div>
+                <div class="gallery-item popup-elem">
+                    <img src="./gallery.png" alt="Grupo de amigos relajándose en el mirador del Hostel Andino frente al Lago Aluminé">
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Completos -->
+        <section id="hostel" class="section">
+            <div class="section-head reveal-elem">
+                <h2 class="text-3d">Nuestros Servicios</h2>
+                <p>Cambio de blanquería cada 4 días (si el cliente no dispone de lo contrario) | Limpieza diaria | Traductor bilingüe inglés-español | Recepción las 24 horas | Áreas públicas y privadas no fumadores | Guarda equipos de ski y snowboard | Pool sin restricciones | DVDs | Juegos de mesa | WII.</p>
+            </div>
+            
+            <div class="services-columns popup-elem">
+                <!-- Cocina -->
+                <div class="service-detail-card">
+                    <div class="s-icon">🍳</div>
+                    <h3>Cocina</h3>
+                    <p class="subtitle">Amplia cocina-comedor de 25 m²:</p>
+                    <ul>
+                        <li>Horno industrial refractario pizzero.</li>
+                        <li>Cocina, bacha y heladera industriales.</li>
+                        <li>Mesa amplia con 14 sillas estilo campo.</li>
+                        <li>Vajilla completa para 20 huéspedes.</li>
+                        <li>Cafetera eléctrica y horno microondas.</li>
+                    </ul>
+                </div>
+                <!-- Estar -->
+                <div class="service-detail-card">
+                    <div class="s-icon">🛋️</div>
+                    <h3>Estar</h3>
+                    <p class="subtitle">45 m², equipados con:</p>
+                    <ul>
+                        <li>2 cómodos divanes cama.</li>
+                        <li>TV LCD con servicio de Direct TV.</li>
+                        <li>Mesa de pool.</li>
+                        <li>Calefacción.</li>
+                    </ul>
+                </div>
+                <!-- Habitaciones -->
+                <div class="service-detail-card">
+                    <div class="s-icon">🛏️</div>
+                    <h3>Habitaciones</h3>
+                    <p class="subtitle">3 UNIDADES de 15 m²:</p>
+                    <ul>
+                        <li>Baño privado completo (ducha alta presión).</li>
+                        <li>6 camas (modificables para familias).</li>
+                        <li>Lockers individuales con llave.</li>
+                        <li>Calefacción.</li>
+                    </ul>
+                </div>
+                <!-- Sanitarios & Blanqueria -->
+                <div class="service-detail-card">
+                    <div class="s-icon">🚿</div>
+                    <h3>Sanitarios y Blanquería</h3>
+                    <p class="subtitle">Equipamiento integral brindado al huésped:</p>
+                    <ul>
+                        <li>3 baños privados completos y 1 adicional de servicio (invitados).</li>
+                        <li>Juegos de toalla y toallón.</li>
+                        <li>Sábanas, frazadas y acolchados.</li>
+                    </ul>
+                </div>
+                <!-- Estacionamiento -->
+                <div class="service-detail-card">
+                    <div class="s-icon">🌲</div>
+                    <h3>Estacionamiento y Jardín</h3>
+                    <p class="subtitle">Instalaciones exteriores:</p>
+                    <ul>
+                        <li>Amplio parque natural relajante.</li>
+                        <li>Estacionamiento interno al aire libre.</li>
+                        <li>(Espacios no techados).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla Comparativa de Tarifas (Mejora SEO/AEO) -->
+        <section class="section">
+            <div class="section-head reveal-elem">
+                <h2 class="text-3d">Tarifas y Comparativa</h2>
+            </div>
+            <div class="pricing-table-container popup-elem">
+                <table class="glass-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Alojamiento</th>
+                            <th>Hostel Andino</th>
+                            <th>Hotel Clásico (Promedio)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dormitorio Compartido (6 pax)</td>
+                            <td>$15,000 ARS / noche</td>
+                            <td>No disponible</td>
+                        </tr>
+                        <tr>
+                            <td>Habitación Privada (Baño Ensuite)</td>
+                            <td>$40,000 ARS / noche</td>
+                            <td>$70,000 ARS / noche</td>
+                        </tr>
+                        <tr>
+                            <td>Acceso a Cocina Propia</td>
+                            <td>Sí, 24 horas gratuita</td>
+                            <td>No / Servicio de pago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Opciones Interactivas -->
+        <section id="experiencias" class="section dark-module">
+            <div class="interactive-header reveal-elem">
+                <h2 class="text-3d">Escapada con Estilo</h2>
+                <p>Descubre maravillosas experiencias temáticas en comunión con la naturaleza.</p>
+            </div>
+            
+            <div class="interactive-selector popup-elem">
+                <!-- Glamping -->
+                <div class="interactive-option active" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');">
+                    <div class="shadow-gradient"></div>
+                    <div class="label">
+                        <div class="icon">🏕️</div>
+                        <div class="info">
+                            <div class="main">Glamping de Lujo</div>
+                            <div class="sub">Campamento acogedor bajo las estrellas</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fogata -->
+                <div class="interactive-option" style="background-image: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80');">
+                    <div class="shadow-gradient"></div>
+                    <div class="label">
+                        <div class="icon">🔥</div>
+                        <div class="info">
+                            <div class="main">Fogón Gourmet</div>
+                            <div class="sub">Historias y malvaviscos asados</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lago -->
+                <div class="interactive-option" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80');">
+                    <div class="shadow-gradient"></div>
+                    <div class="label">
+                        <div class="icon">💧</div>
+                        <div class="info">
+                            <div class="main">Refugio en el Lago</div>
+                            <div class="sub">Muelle privado y paseos en canoa</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Spa -->
+                <div class="interactive-option" style="background-image: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80');">
+                    <div class="shadow-gradient"></div>
+                    <div class="label">
+                        <div class="icon">♨️</div>
+                        <div class="info">
+                            <div class="main">Spa de Montaña</div>
+                            <div class="sub">Sauna exterior y jacuzzi</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Aventura Guiada -->
+                <div class="interactive-option" style="background-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80');">
+                    <div class="shadow-gradient"></div>
+                    <div class="label">
+                        <div class="icon">🥾</div>
+                        <div class="info">
+                            <div class="main">Aventura Guiada</div>
+                            <div class="sub">Tours en la naturaleza por expertos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservas en Línea -->
+        <section id="reservas" class="section">
+            <div class="section-head reveal-elem">
+                <h2 class="text-3d">Reservá tu Lugar</h2>
+                <p>Planificá tu estadía en Hostel Andino. Envíanos los detalles rápida y directamente por WhatsApp.</p>
+            </div>
+            
+            <div class="reservas-grid popup-elem">
+                <!-- Formulario -->
+                <div class="reservas-form-container glass-card">
+                    <h3>Detalles de la Reserva</h3>
+                    <form id="reserva-form" class="custom-form">
+                        <div class="form-group">
+                            <label for="res-name">Nombre Completo</label>
+                            <input type="text" id="res-name" required placeholder="Ej: Juan Pérez">
+                        </div>
+                        <div class="form-group">
+                            <label for="res-phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="res-phone" required placeholder="Ej: +54 9 2942...">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-days">Cantidad de Días</label>
+                                <input type="number" id="res-days" required min="1" placeholder="3">
+                            </div>
+                            <div class="form-group">
+                                <label for="res-people">Cantidad de Personas</label>
+                                <input type="number" id="res-people" required min="1" placeholder="2">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit">Enviar Solicitud por WhatsApp</button>
+                    </form>
+                </div>
+                
+                <!-- Mapa -->
+                <div class="reservas-map-container glass-card">
+                    <h3>Nuestra Ubicación</h3>
+                    <div class="map-wrapper">
+                        <!-- Villa Pehuenia centro Google maps iframe -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12330.138407425126!2d-71.2001552!3d-38.8824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9615560b7d7f7e91%3A0x6bba8d234be1d12c!2sVilla%20Pehuenia%2C%20Neuqu%C3%A9n!5e0!3m2!1sen!2sar!4v1712435500000!5m2!1sen!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ (AEO Optimizada) -->
+        <section id="faq" class="section dark-module-faq">
+            <div class="section-head reveal-elem">
+                <h2 class="text-3d">Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item faq-stagger">
+                    <div class="faq-head">¿Dónde queda el Hostel Andino exactamente? <span>+</span></div>
+                    <div class="faq-body">El hostel se encuentra en el centro cívico de Villa Pehuenia, a orillas del Lago Aluminé, provincia de Neuquén.</div>
+                </div>
+                <div class="faq-item faq-stagger">
+                    <div class="faq-head">¿Qué servicios incluye la tarifa? <span>+</span></div>
+                    <div class="faq-body">Todas las tarifas incluyen ropa de cama, Wi-Fi libre de alta velocidad, calefacción central, y acceso a los espacios comunes.</div>
+                </div>
+                <div class="faq-item faq-stagger">
+                    <div class="faq-head">¿Cuál es la mejor época para visitar Batea Mahuida? <span>+</span></div>
+                    <div class="faq-body">De junio a septiembre para disfrutar del esquí en la nieve, o de diciembre a marzo para actividades de verano en los lagos.</div>
+                </div>
+                <div class="faq-item faq-stagger">
+                    <div class="faq-head">¿Cómo llegar a Villa Pehuenia desde Zapala? <span>+</span></div>
+                    <div class="faq-body">Se llega por la Ruta Provincial 13. El trayecto dura aproximadamente 2 horas en auto.</div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Elegante -->
+        <footer class="site-footer">
+            <div class="footer-grid">
+                <div class="footer-col branding">
+                    <h2>Hostel Andino</h2>
+                    <p>Tu refugio perfecto en el corazón de Villa Pehuenia. Comodidad, naturaleza y pasión por la montaña en un solo lugar.</p>
+                </div>
+                
+                <div class="footer-col menu">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="#hostel">Servicios e Inst.</a></li>
+                        <li><a href="#tarifas">Tarifas AEO</a></li>
+                        <li><a href="#experiencias">Experiencias</a></li>
+                        <li><a href="#faq">F.A.Q.</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col contact">
+                    <h3>Contacto Directo</h3>
+                    <ul>
+                        <li>📍 Centro Cívico, Villa Pehuenia</li>
+                        <li>📞 +54 9 2942 555-444</li>
+                        <li>✉️ info@hostelandino.com.ar</li>
+                        <li>🛎️ Recepción 24 Horas</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col social">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">📱 Instagram</a>
+                        <a href="#" class="social-btn">📘 Facebook</a>
+                        <a href="#" class="social-btn">📺 YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hostel Andino - Villa Pehuenia. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+    
+    <!-- Chat Widget Float -->
+    <div id="chat-widget" class="chat-widget">
+        <button id="chat-toggle" class="chat-toggle" aria-label="Abrir Chat">
+            <span class="icon">💬</span>
+            <span class="notification-dot"></span>
+        </button>
+        
+        <div id="chat-panel" class="chat-panel hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="status-dot"></span>
+                    Recepción Andino
+                </div>
+                <button id="chat-close" class="chat-close" aria-label="Cerrar Chat">✖</button>
+            </div>
+            
+            <div id="chat-form-view" class="chat-body scrollable">
+                <p class="chat-greeting">¡Hola! Déjanos tus datos. Te responderemos en breve o te contactaremos vía WhatsApp.</p>
+                <form id="chat-form" class="chat-form">
+                    <input type="text" id="chat-name" placeholder="Tu Nombre completo" required>
+                    <input type="tel" id="chat-phone" placeholder="Tu Teléfono (ej. +54 9...)" required>
+                    <textarea id="chat-message" placeholder="¿En qué te podemos ayudar? (Consultas, fechas...)" required></textarea>
+                    <button type="submit" class="chat-submit">Iniciar Conversación</button>
+                </form>
+            </div>
+            
+            <div id="chat-success-view" class="chat-body hidden">
+                <div class="success-icon">✔️</div>
+                <div class="chat-greeting" style="font-weight:700; color:var(--text-main);">¡Mensaje Recibido!</div>
+                <p>Gracias <span id="chat-user-name" style="font-weight: 800;"></span>. Un miembro de nuestro equipo ha recibido tu consulta y se pondrá en contacto enseguida.</p>
+                <button id="chat-reset" class="chat-outline-btn">Nueva Consulta</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
