@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const personas = document.getElementById('res-people').value;
             
             // Mensaje que enviará a WhatsApp
-            const textWa = encodeURIComponent(`¡Hola Hostel Andino! Quisiera solicitar una estadía 😊:\n\n👤 Nombre: ${nombre}\n📞 Teléfono: ${telefono}\n📅 Días: ${dias}\n👥 Personas: ${personas}\n\nQuedo a la espera de confirmación de disponibilidad.`);
+            const textWa = encodeURIComponent(`¡Hola Hostel! Quisiera solicitar una estadía 😊:\n\n👤 Nombre: ${nombre}\n📞 Teléfono: ${telefono}\n📅 Días: ${dias}\n👥 Personas: ${personas}\n\nQuedo a la espera de confirmación de disponibilidad.`);
             
             // Abre WhatsApp en una ventana nueva, con el número brindado (+54 9 2942 555-444)
             window.open(`https://wa.me/5492942555444?text=${textWa}`, '_blank');
